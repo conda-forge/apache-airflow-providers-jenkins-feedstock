@@ -21,13 +21,13 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     - python-jenkins >=1.0.0
 
 test:
   imports:
     - airflow.providers.jenkins
-    - airflow.providers.jenkins.example_dags
+    - airflow.providers.jenkins.hooks
   commands:
     - pip check
   requires:
