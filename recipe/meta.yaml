@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-jenkins" %}
-{% set version = "3.4.0" %}
+{% set version = "3.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-jenkins-{{ version }}.tar.gz
-  sha256: f3d73d970510995d2060d23a160bc57a81f56207c33ee0b0856d1469d7db0bc9
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: ffc6a92adac6b213ff1dbea1a7a473bd9d7a751570894e263a29311d8fde5b59
 
 build:
   noarch: python
@@ -16,30 +16,27 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.5.0
+    - apache-airflow >=2.6.0
     - python-jenkins >=1.0.0
 
 test:
   imports:
     - airflow.providers.jenkins
-    - airflow.providers.jenkins.hooks
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-jenkins package
+  home: https://github.com/apache/airflow/
+  summary: Provider package apache-airflow-providers-jenkins for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/jenkins/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-jenkins/stable/index.html
   dev_url: https://github.com/apache/airflow/
