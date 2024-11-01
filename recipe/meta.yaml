@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_jenkins-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_jenkins-{{ version }}.tar.gz
   sha256: bd62c0473fefbb019f2ae6624a86027a6eef169b32cb747843d49caf08dde0b8
 
 build:
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
+    - python >=3.9,<4.dev0
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.8
+    - python >=3.9,<4.dev0
     - apache-airflow >=2.8.0
     - python-jenkins >=1.0.0
 
