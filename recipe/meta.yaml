@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-jenkins" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_jenkins-{{ version }}.tar.gz
-  sha256: 1b4ae2cbaf1bf711bbbc19387963f217c907993c6715b364aa27f0b54bbd2737
+  sha256: 54dbe80c62ebf8d32f50463a9b2d0bc75465e699a569eda1e29e8c4e19a9b991
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.0
+    - flit-core ==3.10.1
     - pip
   run:
     - python >={{ python_min }},<4.dev0
@@ -37,7 +37,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-jenkins for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/jenkins/LICENSE
+  license_file: src/airflow/providers/jenkins/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-jenkins/stable/index.html
   dev_url: https://github.com/apache/airflow/
