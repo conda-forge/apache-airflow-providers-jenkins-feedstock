@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-jenkins" %}
-{% set version = "4.0.3" %}
+{% set version = "4.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_jenkins-{{ version }}.tar.gz
-  sha256: 399296530de33fcad75cd4c1df396f8d88462ca2b304baf73aa508f5f81e94f4
+  sha256: c9601e3f14503c964012e1423124e0a5ee70a5bf203eae7f30f2169a4dc1e1cd
 
 build:
   noarch: python
