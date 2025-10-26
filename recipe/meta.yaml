@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-jenkins" %}
-{% set version = "4.1.3" %}
+{% set version = "4.1.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_jenkins-{{ version }}.tar.gz
-  sha256: 9eb98ea19e7eb8d68c71f415f4cb7654e0071f07391ee1a7080a37b3c0010662
+  sha256: 334545474f035230d33c4900114836bb1457b27b8518c8305b260b58dba90c66
 
 build:
   noarch: python
@@ -23,6 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
+    - apache-airflow-providers-common-compat >=1.8.0
     - python-jenkins >=1.8.2
 
 test:
