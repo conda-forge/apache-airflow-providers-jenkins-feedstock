@@ -29,7 +29,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.jenkins
+      - airflow.providers.jenkins
       pip_check: true
       python_version: ${{ python_min }}.*
 
