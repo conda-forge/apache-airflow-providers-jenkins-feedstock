@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-jenkins
-  version: "4.2.3"
+  version: "4.2.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_jenkins-${{ version }}.tar.gz
-  sha256: d6c8729d8aa7c7b99a989fa21921e866bfebf75f21e99846bf66ffffeb53d8d9
+  sha256: 8165db15ff2ad048e3b8b4963ca71a3d33d902503500dec23f7685f598527ba8
 
 build:
   noarch: python
