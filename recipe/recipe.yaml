@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-jenkins
-  version: "4.2.6"
+  version: "4.2.7"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_jenkins-${{ version }}.tar.gz
-  sha256: a2ff67dde6943476ff7483339daf0b6f0677729ad0f4999006e032ba63b49707
+  sha256: 9904097bf1f6f2a148d6bd8986e6b0418505daea604cdb75ee565c1c700096a6
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
